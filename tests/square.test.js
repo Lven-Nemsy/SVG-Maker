@@ -1,7 +1,12 @@
-const Square = require("./square.js");
+const Square = require("../lib/square");
 
-const shape1 = new Square();
-shape1.setColor("blue");
-expect(shape1.render()).toEqual(
-	`<rect x="60" y="10" rx="10" ry="10" width="30" height="30" fill="${shape1.color}" />`
-);
+describe("SVG SQUARE", () => {
+	test("will this return the svg string", () => {
+		const shape = new Square("a", "b", "c");
+
+		expect(shape.render()).toEqual(
+			`<svg version="1.1" width="200" height="200" xmlns="http://www.w3.org/2000/svg"><rect x="50" y="50" width="200" height="200" h= "200" fill="b" /><text x="125" y="140" font-size="60" text-anchor="middle" fill="a">c</text></svg>`
+		);
+	})
+})
+ 
