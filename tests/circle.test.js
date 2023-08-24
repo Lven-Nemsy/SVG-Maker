@@ -1,6 +1,7 @@
 const Circle = require("../lib/circle");
 
 
+// Tests if code is being rendered properly
 describe("SVG CIRCLE", () => {
 	test("will this return the svg string", () => {
 		const shape = new Circle("a", "b", "c");
