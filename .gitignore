@@ -1,4 +1,6 @@
 # Ignore node module foldor
 node_modules/
 # Ignore node module foldor
-node_modules
+**/node_modules
+
+**/dist
